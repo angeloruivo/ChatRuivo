@@ -1,9 +1,12 @@
-FROM python:3.12.2-slim-buster
+FROM python:3-alpine
 
 WORKDIR /app
 
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["flet", "app.py"]
+EXPOSE 8080
+
+CMD ["python", "./main.py"]
