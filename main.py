@@ -1,4 +1,5 @@
 import flet as ft
+import flet_fastapi
 
 def main(pagina):
     texto=ft.Text("ZapRuivo")
